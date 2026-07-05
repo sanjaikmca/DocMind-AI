@@ -1,5 +1,12 @@
 # 🧠 DocMind AI
 
+![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit)
+![LangChain](https://img.shields.io/badge/LangChain-RAG-green)
+![FAISS](https://img.shields.io/badge/FAISS-VectorDB-orange)
+![Ollama](https://img.shields.io/badge/Ollama-Llama3-black)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
 ### Intelligent Document Question Answering System using RAG, Llama 3, LangChain and FAISS
 
 DocMind AI is an AI-powered document question answering system that allows users to upload one or more PDF documents and ask questions in natural language. The application retrieves the most relevant information from the uploaded documents using Retrieval-Augmented Generation (RAG) and generates accurate answers using Llama 3.
