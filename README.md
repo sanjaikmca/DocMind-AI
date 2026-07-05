@@ -7,69 +7,76 @@
 ![Ollama](https://img.shields.io/badge/Ollama-Llama%203-black)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-### Intelligent Document Question Answering System using RAG, Llama 3, LangChain and FAISS
+### 🚀 Intelligent Multi-Document Question Answering System using RAG, Llama 3, LangChain and FAISS
 
-DocMind AI is an AI-powered document question answering system that enables users to upload documents, ask questions in natural language, and receive context-aware answers. The application uses Retrieval-Augmented Generation (RAG) to retrieve relevant information from uploaded documents and generates accurate responses using Llama 3.
+DocMind AI is an AI-powered **Multi-Document Question Answering System** that enables users to upload documents in multiple formats and interact with them using natural language.
 
-> **Current supported document format:** PDF
+The application leverages **Retrieval-Augmented Generation (RAG)** to retrieve the most relevant document content through **FAISS semantic search**, and generates accurate, context-aware answers using **Llama 3** running locally with **Ollama**.
+
+Users can upload multiple documents, ask questions, view retrieved sources, inspect supporting context, and interact through an intuitive Streamlit interface.
 
 ---
 
 # ✨ Features
 
-- 📄 Upload one or more documents (PDF support)
-- 🤖 Ask questions in natural language
+- 📄 Upload multiple documents (PDF, DOCX, TXT, Markdown)
+- 🤖 Natural language question answering
 - 🧠 Retrieval-Augmented Generation (RAG)
-- 🔍 Semantic search using FAISS Vector Store
+- 🔍 Semantic document retrieval using FAISS
 - 💬 Llama 3 powered answer generation
-- 📑 Document preview
 - 📚 Source citations with page numbers
 - 📌 Retrieved context viewer
+- 📄 Document preview
 - 📊 Document statistics
-- 🎨 Clean and interactive Streamlit interface
-- ⚡ Local and privacy-friendly inference using Ollama
+- ⚡ Fast local inference using Ollama
+- 🎨 Interactive Streamlit interface
+- 👨‍💻 Clean modular project architecture
 
 ---
 
 # 🛠 Tech Stack
 
 | Category | Technology |
-|----------|------------|
+|-----------|------------|
 | Language | Python |
 | UI Framework | Streamlit |
 | LLM | Llama 3 (Ollama) |
-| RAG Framework | LangChain |
+| Framework | LangChain |
 | Embedding Model | all-MiniLM-L6-v2 |
 | Vector Store | FAISS |
-| Document Processing | PyMuPDF, LangChain Document Loaders |
+| Document Processing | PyMuPDF, Docx2txtLoader, TextLoader |
+| Embeddings | Sentence Transformers |
 
 ---
 
-# 🏗 System Architecture
+# 🏗️ System Architecture
 
 ```text
-Documents
-     │
-     ▼
-Document Loader
-     │
-     ▼
-Text Splitter
-     │
-     ▼
-Sentence Transformer Embeddings
-     │
-     ▼
-FAISS Vector Store
-     │
-     ▼
-Relevant Context Retrieval
-     │
-     ▼
-Llama 3 (Ollama)
-     │
-     ▼
-Generated Answer + Source Citations
+PDF / DOCX / TXT / Markdown
+              │
+              ▼
+      Document Loader
+              │
+              ▼
+        Text Extraction
+              │
+              ▼
+       Document Chunking
+              │
+              ▼
+ Sentence Transformer Embeddings
+              │
+              ▼
+        FAISS Vector Store
+              │
+              ▼
+    Semantic Context Retrieval
+              │
+              ▼
+       Llama 3 (Ollama)
+              │
+              ▼
+ Generated Answer + Source Citations
 ```
 
 ---
@@ -80,53 +87,69 @@ Generated Answer + Source Citations
 DocMind-AI/
 │
 ├── app.py
-├── chatbot.py
-├── config.py
-├── document_processor.py
-├── document_viewer.py
-├── loader.py
-├── splitter.py
-├── embeddings.py
-├── vector_store.py
-├── ui_helpers.py
-│
 ├── requirements.txt
 ├── README.md
 ├── LICENSE
-└── .gitignore
+├── .gitignore
+│
+├── utils/
+│   ├── __init__.py
+│   ├── chatbot.py
+│   ├── config.py
+│   ├── document_processor.py
+│   ├── document_viewer.py
+│   ├── embeddings.py
+│   ├── loader.py
+│   ├── splitter.py
+│   ├── ui_helpers.py
+│   └── vector_store.py
+│
+├── data/
+│
+└── assets/
 ```
 
 ---
 
 # 🚀 Installation
 
-## Clone the repository
+## 1️⃣ Clone the repository
 
 ```bash
 git clone https://github.com/sanjaikmca/DocMind-AI.git
 ```
 
-## Navigate to the project
+## 2️⃣ Navigate to the project
 
 ```bash
 cd DocMind-AI
 ```
 
-## Install dependencies
+## 3️⃣ Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Start Ollama
+## 4️⃣ Install Ollama
 
-Make sure Ollama is installed, then run:
+Download Ollama from:
+
+https://ollama.com
+
+Pull the Llama 3 model:
+
+```bash
+ollama pull llama3
+```
+
+Start Ollama:
 
 ```bash
 ollama run llama3
 ```
 
-## Launch the application
+## 5️⃣ Run the application
 
 ```bash
 streamlit run app.py
@@ -136,70 +159,72 @@ streamlit run app.py
 
 # 💡 How to Use
 
-1. Launch the application.
-2. Upload one or more supported documents (PDF).
-3. Wait for document processing to complete.
-4. Ask questions about the uploaded content.
-5. View the generated answer along with source citations and retrieved context.
+1. Launch DocMind AI.
+2. Upload one or more documents (PDF, DOCX, TXT, or Markdown).
+3. Wait while the application processes and indexes the uploaded documents.
+4. Ask questions in natural language.
+5. Review the generated answer.
+6. Explore the retrieved context and source citations for transparency.
 
 ---
 
 # 📸 Screenshots
 
-## Home
+## 🏠 Home Page
 
-> *(Add Home Screenshot Here)*
-
----
-
-## Document Upload
-
-> *(Add Upload Screenshot Here)*
+> Add screenshot here
 
 ---
 
-## Question Answering
+## 📤 Upload Documents
 
-> *(Add Chat Screenshot Here)*
-
----
-
-## Retrieved Context
-
-> *(Add Retrieved Context Screenshot Here)*
+> Add screenshot here
 
 ---
 
-## Source Citations
+## 💬 Question Answering
 
-> *(Add Source Citation Screenshot Here)*
+> Add screenshot here
 
 ---
 
-# 🎯 Project Highlights
+## 📚 Source Citations
 
-- Modular project architecture
+> Add screenshot here
+
+---
+
+## 🔍 Retrieved Context
+
+> Add screenshot here
+
+---
+
+# 🎯 Key Highlights
+
+- Multi-document support
 - Retrieval-Augmented Generation (RAG)
-- Local LLM inference using Ollama
-- FAISS semantic search
-- Context-aware responses
-- Multiple document support
-- Source attribution
+- Local Llama 3 inference with Ollama
+- Semantic search using FAISS
+- Context-aware question answering
+- Source attribution with page numbers
+- Retrieved context inspection
 - Interactive Streamlit interface
+- Modular and maintainable architecture
 
 ---
 
-# 🔮 Future Improvements
+# 🔮 Future Enhancements
 
-- Support additional document formats (DOCX, TXT, Markdown)
+- OCR support for scanned documents
 - Hybrid Search (BM25 + FAISS)
 - Conversation memory
-- Document summarization
 - Multi-model support
-- Streaming LLM responses
 - Cloud deployment
-- Authentication and user sessions
+- Authentication and user accounts
 - Chat history export
+- Answer confidence scoring
+- Advanced document preview
 
 ---
 
@@ -207,25 +232,40 @@ streamlit run app.py
 
 ## Sanjai K
 
-AI / Machine Learning Engineer
+**Machine Learning Engineer**
 
-- 🎓 MCA Graduate
+- 🎓 Master of Computer Applications (MCA)
 - 📄 IEEE Published Researcher
+- 🤖 Passionate about Machine Learning, Generative AI, LLMs, RAG Systems, and AI Applications
 
-### GitHub
+### 🔗 GitHub
 
 https://github.com/sanjaikmca
 
-### LinkedIn
+### 🔗 LinkedIn
 
 https://www.linkedin.com/in/sanjaikmca
 
 ---
 
-# 📜 License
+# 🤝 Contributing
 
-This project is licensed under the MIT License.
+Contributions, suggestions, and improvements are welcome.
+
+Feel free to fork the repository and submit a Pull Request.
 
 ---
 
-## ⭐ If you found this project useful, consider giving it a Star on GitHub!
+# 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## ⭐ Support
+
+If you found this project useful, please consider giving it a ⭐ on GitHub.
+
+It helps others discover the project and supports future improvements.
+
+Thank you for visiting **DocMind AI**! 🚀
