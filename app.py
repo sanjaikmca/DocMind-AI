@@ -48,23 +48,10 @@ if uploaded_files:
         file_paths.append(path)
 
     with st.spinner("📄 Processing documents..."):
-        vector_db, num_pages, num_chunks = process_documents(file_paths)
+        vector_db = process_documents(file_paths)
 
     st.success("✅ Documents processed successfully!")
 
-    st.sidebar.markdown("### 📊 Document Statistics")
-
-    st.sidebar.info(
-        f"""
-📄 Documents : {len(uploaded_files)}
-
-📑 Pages : {num_pages}
-
-✂️ Chunks : {num_chunks}
-
-🧠 Embedding : all-MiniLM-L6-v2
-"""
-    )
 if st.sidebar.button("🗑 Clear Chat"):
     st.session_state.messages=[]
     st.rerun()
@@ -73,8 +60,9 @@ if st.sidebar.button("🗑 Clear Chat"):
 st.sidebar.subheader("🤖 AI Engine")
 
 st.sidebar.success("🧠 Model: Llama 3")
+st.sidebar.success("🖥 Framework: Streamlit")
 st.sidebar.success("📦 Vector Store: FAISS")
-st.sidebar.success("🔍 Embeddings: MiniLM-L6-v2")
+st.sidebar.success("🔍 Embeddings: all-MiniLM-L6-v2")
 st.sidebar.success("👨‍💻 Built by Sanjai K")    
 left,right=st.columns([1,2])
 
