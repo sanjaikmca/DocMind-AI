@@ -29,9 +29,6 @@ def process_documents(file_paths):
 
     chunks = split_documents(all_documents)
 
-    num_pages = len(all_documents)
-    num_chunks = len(chunks)
-
     embedding_model = get_embedding_model()
 
     vector_db = create_vector_store(
@@ -41,4 +38,4 @@ def process_documents(file_paths):
 
     save_vector_store(vector_db)
 
-    return vector_db, num_pages, num_chunks
+    return vector_db
