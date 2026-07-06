@@ -7,13 +7,13 @@
 ![Ollama](https://img.shields.io/badge/Ollama-Llama%203-black)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-### 🚀 Intelligent Multi-Document Question Answering System using RAG, Llama 3, LangChain and FAISS
+## 🚀 Intelligent Multi-Document Question Answering System using RAG, Llama 3, LangChain and FAISS
 
-DocMind AI is an AI-powered **Multi-Document Question Answering System** that enables users to upload documents in multiple formats and interact with them using natural language.
+DocMind AI is an AI-powered **Multi-Document Question Answering System** that enables users to upload multiple document formats and interact with them using natural language.
 
-The application leverages **Retrieval-Augmented Generation (RAG)** to retrieve the most relevant document content through **FAISS semantic search**, and generates accurate, context-aware answers using **Llama 3** running locally with **Ollama**.
+The application leverages **Retrieval-Augmented Generation (RAG)** to retrieve the most relevant information from uploaded documents through **FAISS semantic search** and generates accurate, context-aware answers using **Llama 3** running locally with **Ollama**.
 
-Users can upload multiple documents, ask questions, view retrieved sources, inspect supporting context, and interact through an intuitive Streamlit interface.
+Users can upload multiple documents, ask questions, view retrieved sources, inspect supporting context, and interact through a clean and intuitive Streamlit interface.
 
 ---
 
@@ -24,13 +24,13 @@ Users can upload multiple documents, ask questions, view retrieved sources, insp
 - 🧠 Retrieval-Augmented Generation (RAG)
 - 🔍 Semantic document retrieval using FAISS
 - 💬 Llama 3 powered answer generation
+- 📄 PDF preview for uploaded documents
 - 📚 Source citations with page numbers
-- 📌 Retrieved context viewer
-- 📄 Document preview
-- 📊 Document statistics
-- ⚡ Fast local inference using Ollama
+- 🔍 Retrieved context viewer
+- ⚡ Fast document processing
+- 🌐 Local inference using Ollama
 - 🎨 Interactive Streamlit interface
-- 👨‍💻 Clean modular project architecture
+- 🧩 Modular project architecture
 
 ---
 
@@ -38,10 +38,10 @@ Users can upload multiple documents, ask questions, view retrieved sources, insp
 
 | Category | Technology |
 |-----------|------------|
-| Language | Python |
+| Programming Language | Python |
 | UI Framework | Streamlit |
 | LLM | Llama 3 (Ollama) |
-| Framework | LangChain |
+| RAG Framework | LangChain |
 | Embedding Model | all-MiniLM-L6-v2 |
 | Vector Store | FAISS |
 | Document Processing | PyMuPDF, Docx2txtLoader, TextLoader |
@@ -55,25 +55,25 @@ Users can upload multiple documents, ask questions, view retrieved sources, insp
 PDF / DOCX / TXT / Markdown
               │
               ▼
-      Document Loader
+        Document Loader
               │
               ▼
         Text Extraction
               │
               ▼
-       Document Chunking
+      Document Chunking
               │
               ▼
- Sentence Transformer Embeddings
+Sentence Transformer Embeddings
               │
               ▼
-        FAISS Vector Store
+       FAISS Vector Store
               │
               ▼
-    Semantic Context Retrieval
+ Semantic Context Retrieval
               │
               ▼
-       Llama 3 (Ollama)
+      Llama 3 (Ollama)
               │
               ▼
  Generated Answer + Source Citations
@@ -143,13 +143,13 @@ Pull the Llama 3 model:
 ollama pull llama3
 ```
 
-Start Ollama:
+Run the model:
 
 ```bash
 ollama run llama3
 ```
 
-## 5️⃣ Run the application
+## 5️⃣ Launch the application
 
 ```bash
 streamlit run app.py
@@ -159,12 +159,12 @@ streamlit run app.py
 
 # 💡 How to Use
 
-1. Launch DocMind AI.
+1. Launch **DocMind AI**.
 2. Upload one or more documents (PDF, DOCX, TXT, or Markdown).
-3. Wait while the application processes and indexes the uploaded documents.
+3. Wait while the application processes the uploaded documents.
 4. Ask questions in natural language.
-5. Review the generated answer.
-6. Explore the retrieved context and source citations for transparency.
+5. View the generated answer.
+6. Review the retrieved context and source citations.
 
 ---
 
@@ -172,31 +172,31 @@ streamlit run app.py
 
 ## 🏠 Home Page
 
-> Add screenshot here
+> *(Add Home Screenshot Here)*
 
 ---
 
 ## 📤 Upload Documents
 
-> Add screenshot here
+> *(Add Upload Screenshot Here)*
 
 ---
 
 ## 💬 Question Answering
 
-> Add screenshot here
+> *(Add Chat Screenshot Here)*
 
 ---
 
 ## 📚 Source Citations
 
-> Add screenshot here
+> *(Add Source Citation Screenshot Here)*
 
 ---
 
 ## 🔍 Retrieved Context
 
-> Add screenshot here
+> *(Add Retrieved Context Screenshot Here)*
 
 ---
 
@@ -204,13 +204,13 @@ streamlit run app.py
 
 - Multi-document support
 - Retrieval-Augmented Generation (RAG)
-- Local Llama 3 inference with Ollama
-- Semantic search using FAISS
-- Context-aware question answering
+- Local Llama 3 inference using Ollama
+- FAISS semantic search
+- Context-aware responses
 - Source attribution with page numbers
 - Retrieved context inspection
 - Interactive Streamlit interface
-- Modular and maintainable architecture
+- Modular and scalable architecture
 
 ---
 
@@ -220,11 +220,11 @@ streamlit run app.py
 - Hybrid Search (BM25 + FAISS)
 - Conversation memory
 - Multi-model support
-- Cloud deployment
 - Authentication and user accounts
 - Chat history export
 - Answer confidence scoring
-- Advanced document preview
+- Web deployment
+- Enhanced document preview
 
 ---
 
@@ -238,13 +238,10 @@ streamlit run app.py
 - 📄 IEEE Published Researcher
 - 🤖 Passionate about Machine Learning, Generative AI, LLMs, RAG Systems, and AI Applications
 
-### 🔗 GitHub
+### 🌐 Connect with Me
 
-https://github.com/sanjaikmca
-
-### 🔗 LinkedIn
-
-https://www.linkedin.com/in/sanjaikmca
+- **GitHub:** https://github.com/sanjaikmca
+- **LinkedIn:** https://www.linkedin.com/in/sanjaikmca
 
 ---
 
@@ -264,7 +261,7 @@ This project is licensed under the **MIT License**.
 
 ## ⭐ Support
 
-If you found this project useful, please consider giving it a ⭐ on GitHub.
+If you found this project useful, consider giving it a ⭐ on GitHub.
 
 It helps others discover the project and supports future improvements.
 
