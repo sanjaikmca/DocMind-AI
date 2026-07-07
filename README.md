@@ -172,31 +172,39 @@ streamlit run app.py
 
 ## 🏠 Home Page
 
-> *(Add Home Screenshot Here)*
+![Home](assets/home.png)
 
 ---
 
 ## 📤 Upload Documents
 
-> *(Add Upload Screenshot Here)*
+Upload and process multiple documents in different supported formats.
+
+![Upload](assets/upload.png)
 
 ---
 
 ## 💬 Question Answering
 
-> *(Add Chat Screenshot Here)*
+Ask questions in natural language and receive context-aware answers powered by Retrieval-Augmented Generation (RAG).
+
+![Chat](assets/chat.png)
 
 ---
 
 ## 📚 Source Citations
 
-> *(Add Source Citation Screenshot Here)*
+View the source document and page number used to generate each response.
+
+![Sources](assets/sources.png)
 
 ---
 
 ## 🔍 Retrieved Context
 
-> *(Add Retrieved Context Screenshot Here)*
+Inspect the retrieved document chunks used by the LLM before answer generation.
+
+![Retrieved Context](assets/context.png)
 
 ---
 
