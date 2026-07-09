@@ -1,4 +1,4 @@
-# 🧠 DocMind AI
+#  DocMind AI
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit)
@@ -248,6 +248,7 @@ Inspect the retrieved document chunks used by the LLM before answer generation.
 
 ### 🌐 Connect with Me
 
+- **Portfolio:** https://sanjaikmca.github.io/Sanjai_Portfolio/
 - **GitHub:** https://github.com/sanjaikmca
 - **LinkedIn:** https://www.linkedin.com/in/sanjaikmca
 
